@@ -13,3 +13,33 @@ Two sentences are similar if:
 2. sentence1[i] and sentence2[i] are similar.
 
 Notice that a word is always similar to itself, also notice that the similarity relation is not transitive. For example, if the words a and b are similar, and the words b and c are similar, a and c are not necessarily similar.
+```java
+Example 1:
+
+Input: sentence1 = ["great","acting","skills"], sentence2 = ["fine","drama","talent"], similarPairs = [["great","fine"],["drama","acting"],["skills","talent"]]
+Output: true
+Explanation: The two sentences have the same length and each word i of sentence1 is also similar to the corresponding word in sentence2.
+
+Example 2:
+
+Input: sentence1 = ["great"], sentence2 = ["great"], similarPairs = []
+Output: true
+Explanation: A word is similar to itself.
+
+Example 3:
+
+Input: sentence1 = ["great"], sentence2 = ["doubleplus","good"], similarPairs = [["great","doubleplus"]]
+Output: false
+Explanation: As they don't have the same length, we return false.
+``` 
+
+### Constraints:
+
+1. 1 <= sentence1.length, sentence2.length <= 1000
+2. 1 <= sentence1[i].length, sentence2[i].length <= 20
+3. sentence1[i] and sentence2[i] consist of English letters.
+4. 0 <= similarPairs.length <= 1000
+5. similarPairs[i].length == 2
+6. 1 <= xi.length, yi.length <= 20
+7. xi and yi consist of lower-case and upper-case English letters.
+8. All the pairs (xi, yi) are distinct.
